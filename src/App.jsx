@@ -1,27 +1,30 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Todo from "./pages/Todo";
 
 function App() {
+
   return (
+
     <BrowserRouter>
 
       <Routes>
 
         <Route
-          path="/register"
-          element={<Register />}
+          path="/"
+          element={<Login />}
         />
 
         <Route
           path="/login"
           element={<Login />}
+        />
+
+        <Route
+          path="/register"
+          element={<Register />}
         />
 
         <Route
@@ -31,9 +34,8 @@ function App() {
 
       </Routes>
 
-
-
     </BrowserRouter>
+
   );
 }
 
